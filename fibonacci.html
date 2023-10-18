@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+</head>
+<body>
+    <script>
+     function calcularFibonacci(n) { 
+        if (n <= 0) { 
+            return "El número debe ser mayor que cero.";
+         } else if (n === 1) {
+             return 0;
+             } else if (n === 2) {
+                 return 1;
+                 } else { 
+                    let a = 0;
+                     let b = 1;
+                      let resultado;
+                       for (let i = 3;
+                      i <= n; i++) {
+                         resultado = a + b;
+                          a = b;
+                           b = resultado; } 
+                           return resultado;
+                         } } 
+                         let numero = parseInt(prompt("Ingresa un número "));
+                          let resultado = calcularFibonacci(numero); 
+                          if (typeof resultado === "number") { document.write("El número: "+" " + numero + " si es  Fibonacci y en la secuencia es:  " +" "+ resultado);
+                         } else { document.write(resultado);
+                         }
+    </script>
+</body>
+</html>
